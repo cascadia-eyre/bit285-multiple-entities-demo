@@ -141,6 +141,22 @@
     <Compile Include="Migrations\201802192330219_purchase.Designer.cs">
       <DependentUpon>201802192330219_purchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802202156427_Test#1.cs" />
+    <Compile Include="Migrations\201802202156427_Test#1.Designer.cs">
+      <DependentUpon>201802202156427_Test#1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802202216017_MadeSomeBookChanges.cs" />
+    <Compile Include="Migrations\201802202216017_MadeSomeBookChanges.Designer.cs">
+      <DependentUpon>201802202216017_MadeSomeBookChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802202222053_MadeActualBookChanges.cs" />
+    <Compile Include="Migrations\201802202222053_MadeActualBookChanges.Designer.cs">
+      <DependentUpon>201802202222053_MadeActualBookChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802202226100_PurchasesUpdated.cs" />
+    <Compile Include="Migrations\201802202226100_PurchasesUpdated.Designer.cs">
+      <DependentUpon>201802202226100_PurchasesUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
@@ -162,6 +178,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Purchase.cshtml" />
     <Content Include="Views\Home\Purchases.cshtml" />
+    <Content Include="Views\Home\AddMember.cshtml" />
+    <Content Include="Views\Home\AddAuthors.cshtml" />
+    <Content Include="Views\Home\Authors.cshtml" />
+    <Content Include="Views\Home\Members.cshtml" />
+    <Content Include="Views\Home\Books.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,6 +199,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802192330219_purchase.resx">
       <DependentUpon>201802192330219_purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202156427_Test#1.resx">
+      <DependentUpon>201802202156427_Test#1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202216017_MadeSomeBookChanges.resx">
+      <DependentUpon>201802202216017_MadeSomeBookChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202222053_MadeActualBookChanges.resx">
+      <DependentUpon>201802202222053_MadeActualBookChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202226100_PurchasesUpdated.resx">
+      <DependentUpon>201802202226100_PurchasesUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

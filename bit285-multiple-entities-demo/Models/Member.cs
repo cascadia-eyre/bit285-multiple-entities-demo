@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,11 +8,12 @@ namespace IndyBooks.Models
 {
     public class Member
     {
+        [Key]
         public int MemberID { get; set; }
-
-        // TODO: Create at least three  appropriate properties
-
-        // TODO: Add Property to represent the entity relationship: "A Member can have many Purchases"
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Birthyear { get; set; }
+        
+        public virtual ICollection<Purchase> MemberPurchases { get; set; }
     }
 }

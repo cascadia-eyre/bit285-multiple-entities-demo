@@ -20,6 +20,7 @@ namespace IndyBooks.Models
         public decimal Price { get; set; }
         [Display(Name = "Publication Year")]
         public string Publication { get; set; }
+        public int AuthorID { get; set; } //Author who wrote the book
 
         // Property to represent the entity relationship: "A Book can have many Purchases"
         public virtual ICollection<Purchase> SalesHistory { get; set; }

@@ -33,6 +33,10 @@ namespace IndyBooks.Controllers
          * Book Creation and List
          * TODO: Update methods and Views to Book create and list Books 
          */
+        public ActionResult Books()
+        {
+            return View("Books", db.Books);
+        }
         public ActionResult AddBook()
         {
             return View();
@@ -41,15 +45,59 @@ namespace IndyBooks.Controllers
         [HttpPost]
         public ActionResult AddBook(Book book)
         {
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(book);
+                db.SaveChanges();
+                return View("Books", db.Books);
+            }
             return View();
         }
         /*
           * Author Creation and List
-          * TODO: Develop methods and Views to create and list Authors 
           */
+        public ActionResult AddAuthors() {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddAuthors(Author author) {
+            if (ModelState.IsValid)
+            {
+                db.Authors.Add(author);
+                db.SaveChanges();
+                return View("Authors", db.Authors);
+            }
+            return View();
+        }
+
+        public ActionResult Authors()
+        {
+            return View("Authors", db.Authors);
+        }
         /*
-          * Member Creation and List
-          * TODO: Develop methods and Views to create and list Members 
+          * Member Creation and List 
           */
+        public ActionResult AddMember()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMember(Member member)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Members.Add(member);
+                db.SaveChanges();
+                return View("Members", db.Members);
+            }
+            return View();
+        }
+
+        public ActionResult Members()
+        {
+            return View("Members", db.Members);
+        }
     }
 }
