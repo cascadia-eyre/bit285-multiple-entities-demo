@@ -10,7 +10,7 @@ namespace bit285_multiple_entities_demo.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             ContextKey = "IndyBooks.Models.BookstoreDbContext";
         }
 
@@ -22,46 +22,72 @@ namespace bit285_multiple_entities_demo.Migrations
                 {
                     BookID = 1,
                     Title = "Pride and Prejudice",
+<<<<<<< HEAD
                     Author = "Jane Austin",
                     Price = 9.99M,
                     AuthorID = 3
+=======
+                    AuthorID = 1,
+                    Price = 9.99M
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 },
                 new Book()
                 {
                     BookID = 2,
                     Title = "Northanger Abbey",
+<<<<<<< HEAD
                     Author = "Jane Austin",
                     Price = 12.95M,
                     AuthorID = 3
+=======
+                    AuthorID = 1,
+                    Price = 12.95M
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 },
                 new Book()
                 {
                     BookID = 3,
                     Title = "David Copperfield",
+<<<<<<< HEAD
                     Author = "Charles Dickens",
                     Price = 15.00M,
                     AuthorID = 4
+=======
+                    AuthorID = 2,
+                    Price = 15.00M
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 },
                 new Book()
                 {
                     BookID = 4,
                     Title = "The Wizard of EarthSea",
+<<<<<<< HEAD
                     Author = "Ursula Le Guin",
                     Price = 8.95M,
                     AuthorID = 5
+=======
+                    AuthorID = 3,
+                    Price = 8.95M
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 },
                 new Book()
                 {
                     BookID = 5,
                     Title = "The Tombs of Atuan",
+<<<<<<< HEAD
                     Author = "Ursula Le Guin",
                     Price = 7.95M,
                     AuthorID = 5
+=======
+                    AuthorID = 3,
+                    Price = 7.95M
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 },
                 new Book()
                 {
                     BookID = 6,
                     Title = "The Farthest Shore",
+<<<<<<< HEAD
                     Author = "Ursula Le Guin",
                     Price = 9.95M,
                     AuthorID = 5
@@ -81,10 +107,30 @@ namespace bit285_multiple_entities_demo.Migrations
                     Name = "John Green",
                     FirstBook = "Looking for Alaska",
                     Birthyear = 1977
+=======
+                    AuthorID = 3,
+                    Price = 9.95M
+
+                });
+            // Added several Author records
+            context.Authors.AddOrUpdate(a => a.AuthorID,
+                new Author()
+                {
+                    AuthorID = 1,
+                    FirstName = "Jane",
+                    LastName = "Austen"
+                }, 
+                new Author()
+                {
+                    AuthorID = 2,
+                    FirstName = "Charles",
+                    LastName = "Dickens"
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 },
                 new Author()
                 {
                     AuthorID = 3,
+<<<<<<< HEAD
                     Name = "Jane Austen",
                     FirstBook = "Sense and Sensibility",
                     Birthyear = 1775
@@ -123,6 +169,20 @@ namespace bit285_multiple_entities_demo.Migrations
                 );
 
          
+=======
+                    FirstName = "Ursula",
+                    LastName = "Le Guin"
+                });
+            //TODO: Seed a few more Member records
+            context.Members.AddOrUpdate(m => m.MemberID,
+                new Member()
+                {
+                    MemberID = 1,
+                    FirstName = "Ian",
+                    LastName = "Bansenauer"
+                });
+            //TODO: Seed a few more Purchase records
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
                 new Purchase()
                 {
@@ -130,6 +190,7 @@ namespace bit285_multiple_entities_demo.Migrations
                     Amount = 10.00M,
                     BookID = 6,
                     MemberID = 1
+<<<<<<< HEAD
                 },
                 new Purchase()
                 {
@@ -144,6 +205,8 @@ namespace bit285_multiple_entities_demo.Migrations
                     Amount = 20.00M,
                     BookID = 6,
                     MemberID = 2
+=======
+>>>>>>> 403ee8a12ee4d55e8f43e6c688eefe878253295a
                 });
 
         }
