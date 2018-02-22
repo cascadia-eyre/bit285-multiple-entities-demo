@@ -81,15 +81,40 @@ namespace bit285_multiple_entities_demo.Migrations
                     FirstName = "Ursula",
                     LastName = "Le Guin"
                 });
-            //TODO: Seed a few more Member records
+            //Members
             context.Members.AddOrUpdate(m => m.MemberID,
                 new Member()
                 {
                     MemberID = 1,
                     FirstName = "Ian",
                     LastName = "Bansenauer"
-                });
-            //TODO: Seed a few more Purchase records
+                },
+                new Member()
+                {
+                    MemberID = 2,
+                    FirstName = "Brian",
+                    LastName = "Bansenauer"
+                },
+                new Member()
+                {
+                    MemberID = 3,
+                    FirstName = "Mark",
+                    LastName = "Von Cackles"
+                },
+                new Member()
+                {
+                    MemberID = 4,
+                    FirstName = "Samithy",
+                    LastName = "Callen"
+                },
+                new Member()
+                {
+                    MemberID = 5,
+                    FirstName = "Brigette",
+                    LastName = "Jerome"
+                }
+                );
+            // few more Purchase records
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
                 new Purchase()
                 {
@@ -97,7 +122,36 @@ namespace bit285_multiple_entities_demo.Migrations
                     Amount = 10.00M,
                     BookID = 6,
                     MemberID = 1
-                });
+                },
+                new Purchase()
+                {
+                    PurchaseID = 2,
+                    Amount = 15.00M,
+                    BookID = 3,
+                    MemberID = 1
+                },
+                new Purchase()
+                {
+                    PurchaseID = 3,
+                    Amount = 10.00M,
+                    BookID = 4,
+                    MemberID = 2
+                },
+                new Purchase()
+                {
+                    PurchaseID = 4,
+                    Amount = 8.00M,
+                    BookID = 5,
+                    MemberID = 2
+                },
+                new Purchase()
+                {
+                    PurchaseID = 5,
+                    Amount = 10.00M,
+                    BookID = 2,
+                    MemberID = 4
+                }
+                );
 
         }
     }
